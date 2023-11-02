@@ -3,7 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
     'Snowmass': 'https://api.weather.gov/points/39.2085,-106.9405',
     'Steamboat': 'https://api.weather.gov/points/40.490429,-106.842384',
     'Copper': 'https://api.weather.gov/points/39.501419,-106.1516265',
-    'Keystone': 'https://api.weather.gov/points/39.590052,-105.938305'
+    'Keystone': 'https://api.weather.gov/points/39.590052,-105.938305',
+    'Breckenridge': 'https://api.weather.gov/points/39.4783,-106.0723',
+    'Arapahoe Basin': 'https://api.weather.gov/points/39.64167,-105.87167',
+    'Eldora Mountain': 'https://api.weather.gov/points/39.9372,-105.5827',
+    'Steamboat Springs': 'https://api.weather.gov/points/40.4538,-106.7709',
+    'Monarch Mountain': 'https://api.weather.gov/points/38.5102745,-106.3394693',
+    'Telluride': 'https://api.weather.gov/points/37.9167,-107.8375',
+    'Winter Park': 'https://api.weather.gov/points/39.8628,-105.7787'
+ 
   };
   const coCorners = {
     'topLeft': 'https://api.weather.gov/points/40.995561,-109.043394',
@@ -56,17 +64,18 @@ async function buildCard(data) {
 
 
   document.querySelector('#list').appendChild(card);
-  console.log(data[2])
 
-  console.log(snowPredResults);
-  console.log(forecastData)
-  console.log(GridData)
+  // console.log(data[2])
+  // console.log(snowPredResults);
+  // console.log(forecastData)
+  // console.log(GridData)
 }
 
 function snowfallPrediction(gridData) {
   let predictions = []
   let temp;
   temp = 0;
+
   for (i = 0; i < 4; i++) {
     temp += mmToInch(gridData.properties.snowfallAmount.values[i].value)
   }
