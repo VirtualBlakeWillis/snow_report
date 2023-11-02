@@ -1,0 +1,53 @@
+body {
+    font-family: Lato;
+}
+header {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+
+}
+
+ul {
+    padding-inline-start: 0px;
+
+}
+/* Mountain Card Styling */
+li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    height: 100px;
+    border: 1px solid darkblue;
+    background-color: aliceblue;
+    border-radius: 30px;
+}
+
+.mountain-identifier-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.mountain-snowfall-wrapper .title {
+    padding-bottom: 20px;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+}
+
+.row {
+    padding: 10px;
+}
+
+.card {
+    visibility: hidden;
+}
